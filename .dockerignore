@@ -1,0 +1,16 @@
+scripts/
+test
+
+build/
+.gradle/
+out/
+
+.git/
+.gitignore
+
+docker-compose.yml
+docker-compose.*.yml
+
+.env
+.DS_Store
+*.log
