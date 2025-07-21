@@ -48,6 +48,8 @@ dependencies {
 	// OAuth2
 	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
 
+	implementation 'me.paulschwarz:spring-dotenv:2.2.0'
+
 }
 
 tasks.named('test') {
