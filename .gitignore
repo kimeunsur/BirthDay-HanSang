@@ -38,4 +38,4 @@ out/
 
 ### application ###
 application.yml
-application-*.yml
+application-*.ymlsrc/main/resources/application.properties
