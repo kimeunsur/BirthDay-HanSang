@@ -1,6 +1,8 @@
 package com.hansang.birthday.global.error.exception;
 
 
+import org.springframework.http.HttpStatus;
+
 public enum ErrorCode {
 
     // Common
