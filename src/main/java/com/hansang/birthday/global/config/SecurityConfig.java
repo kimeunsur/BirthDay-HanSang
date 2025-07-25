@@ -1,6 +1,6 @@
 package com.hansang.birthday.global.config;
 
-import com.hansang.birthday.auth.jwt.JwtAuthenticationFilter;
+import com.hansang.birthday.domain.auth.jwt.JwtAuthenticationFilter;
 import com.hansang.birthday.global.security.exception.CustomAccessDeniedHandler;
 import com.hansang.birthday.global.security.exception.CustomAuthenticationEntryPoint;
 import lombok.RequiredArgsConstructor;

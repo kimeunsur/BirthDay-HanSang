@@ -1,7 +1,7 @@
-package com.hansang.birthday.auth.tokens;
+package com.hansang.birthday.domain.auth.tokens;
 
 
-import com.hansang.birthday.auth.jwt.JwtTokenProvider;
+import com.hansang.birthday.domain.auth.jwt.JwtTokenProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

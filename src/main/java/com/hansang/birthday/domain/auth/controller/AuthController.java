@@ -1,10 +1,10 @@
-package com.hansang.birthday.auth.controller;
+package com.hansang.birthday.domain.auth.controller;
 
-import com.hansang.birthday.auth.service.AuthService;
-import com.hansang.birthday.auth.tokens.AuthTokens;
-import com.hansang.birthday.auth.tokens.TokenCookieUtil;
-import com.hansang.birthday.auth.dto.LoginResponse;
-import com.hansang.birthday.auth.service.KakaoService;
+import com.hansang.birthday.domain.auth.service.AuthService;
+import com.hansang.birthday.domain.auth.tokens.AuthTokens;
+import com.hansang.birthday.domain.auth.tokens.TokenCookieUtil;
+import com.hansang.birthday.domain.auth.dto.LoginResponse;
+import com.hansang.birthday.domain.auth.service.KakaoService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;

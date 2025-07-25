@@ -1,4 +1,4 @@
-package com.hansang.birthday.user.domain;
+package com.hansang.birthday.domain.user.domain;
 
 
 import jakarta.persistence.*;

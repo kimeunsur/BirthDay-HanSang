@@ -1,4 +1,4 @@
-package com.hansang.birthday.auth.tokens;
+package com.hansang.birthday.domain.auth.tokens;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

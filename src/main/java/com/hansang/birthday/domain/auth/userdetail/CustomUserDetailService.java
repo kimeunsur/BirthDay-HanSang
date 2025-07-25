@@ -1,7 +1,7 @@
-package com.hansang.birthday.auth.userdetail;
+package com.hansang.birthday.domain.auth.userdetail;
 
-import com.hansang.birthday.user.domain.User;
-import com.hansang.birthday.user.repository.UserRepository;
+import com.hansang.birthday.domain.user.domain.User;
+import com.hansang.birthday.domain.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

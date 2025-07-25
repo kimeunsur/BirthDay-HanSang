@@ -1,4 +1,4 @@
-package com.hansang.birthday.auth.jwt;
+package com.hansang.birthday.domain.auth.jwt;
 
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;

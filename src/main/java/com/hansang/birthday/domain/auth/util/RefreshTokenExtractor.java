@@ -1,4 +1,4 @@
-package com.hansang.birthday.auth.util;
+package com.hansang.birthday.domain.auth.util;
 
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;

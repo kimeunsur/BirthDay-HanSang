@@ -1,6 +1,6 @@
-package com.hansang.birthday.user.repository;
+package com.hansang.birthday.domain.user.repository;
 
-import com.hansang.birthday.user.domain.User;
+import com.hansang.birthday.domain.user.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

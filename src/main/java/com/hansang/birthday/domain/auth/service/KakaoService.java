@@ -1,13 +1,13 @@
-package com.hansang.birthday.auth.service;
+package com.hansang.birthday.domain.auth.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.hansang.birthday.auth.tokens.AuthTokens;
-import com.hansang.birthday.auth.tokens.AuthTokensGenerator;
-import com.hansang.birthday.user.domain.User;
-import com.hansang.birthday.auth.dto.LoginResponse;
-import com.hansang.birthday.user.repository.UserRepository;
+import com.hansang.birthday.domain.auth.tokens.AuthTokens;
+import com.hansang.birthday.domain.auth.tokens.AuthTokensGenerator;
+import com.hansang.birthday.domain.user.domain.User;
+import com.hansang.birthday.domain.auth.dto.LoginResponse;
+import com.hansang.birthday.domain.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 
 import lombok.extern.slf4j.Slf4j;

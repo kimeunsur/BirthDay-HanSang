@@ -1,10 +1,10 @@
-package com.hansang.birthday.auth.service;
+package com.hansang.birthday.domain.auth.service;
 
-import com.hansang.birthday.auth.jwt.JwtTokenProvider;
-import com.hansang.birthday.auth.tokens.AuthTokens;
-import com.hansang.birthday.auth.tokens.AuthTokensGenerator;
-import com.hansang.birthday.auth.util.RefreshTokenExtractor;
-import com.hansang.birthday.user.repository.UserRepository;
+import com.hansang.birthday.domain.auth.jwt.JwtTokenProvider;
+import com.hansang.birthday.domain.auth.tokens.AuthTokens;
+import com.hansang.birthday.domain.auth.tokens.AuthTokensGenerator;
+import com.hansang.birthday.domain.auth.util.RefreshTokenExtractor;
+import com.hansang.birthday.domain.user.repository.UserRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

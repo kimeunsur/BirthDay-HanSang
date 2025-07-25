@@ -1,6 +1,6 @@
-package com.hansang.birthday.auth.userdetail;
+package com.hansang.birthday.domain.auth.userdetail;
 
-import com.hansang.birthday.user.domain.User;
+import com.hansang.birthday.domain.user.domain.User;
 import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
