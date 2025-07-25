@@ -1,4 +1,4 @@
-package com.hansang.birthday.auth.user;
+package com.hansang.birthday.auth.userdetail;
 
 import com.hansang.birthday.user.domain.User;
 import com.hansang.birthday.user.repository.UserRepository;

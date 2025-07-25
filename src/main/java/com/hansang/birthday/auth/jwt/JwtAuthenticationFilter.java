@@ -1,7 +1,7 @@
 package com.hansang.birthday.auth.jwt;
 
-import com.hansang.birthday.auth.user.CustomUserDetailService;
-import com.hansang.birthday.auth.user.CustomUserDetails;
+import com.hansang.birthday.auth.userdetail.CustomUserDetailService;
+import com.hansang.birthday.auth.userdetail.CustomUserDetails;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
