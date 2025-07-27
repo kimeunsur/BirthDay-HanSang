@@ -39,3 +39,6 @@ out/
 ### application ###
 application.yml
 application-*.yml
+
+### pem file ###
+hansang.pem

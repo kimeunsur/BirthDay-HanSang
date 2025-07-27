@@ -1,0 +1,20 @@
+version: 0.0
+os: linux
+
+files:
+  - source: /
+    destination: /home/ubuntu/birthday-hansang
+file_exists_behavior: OVERWRITE
+
+permissions:
+  - object: /home/ubuntu/birthday-hansang
+    owner: ubuntu
+    mode: 755
+    type:
+      - file
+
+hooks:
+  AfterInstall:
+    - location: scripts/after-deploy.sh
+      timeout: 1800
+      runas: ubuntu
