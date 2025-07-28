@@ -26,6 +26,12 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew clean build -x test
 
+      - name: Check JAR output
+        run: ls -al build/libs
+
+      - name: Copy application.yml to root for Docker build
+        run: cp ./src/main/resources/application.yml ./application.yml
+
       - name: Copy files to EC2
         uses: appleboy/scp-action@v0.1.7
         with:
