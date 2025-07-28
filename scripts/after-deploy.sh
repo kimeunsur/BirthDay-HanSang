@@ -1,11 +1,12 @@
 #!/bin/bash
 
-REPOSITORY=/home/ubuntu/birthday-hansang
+# 현재 디렉터리 기준으로 작업
+REPOSITORY=/home/ec2-user
 cd $REPOSITORY
 
 CONTAINER_NAME="birthday-hansang-server"
 IMAGE_NAME="birthday-hansang-image"
-SPRING_PROFILE="prod"  # dev
+SPRING_PROFILE="prod"
 
 echo "> 이전 컨테이너 종료 및 제거"
 docker stop $CONTAINER_NAME || true
@@ -16,7 +17,6 @@ docker rmi $IMAGE_NAME || true
 
 echo "> Docker 이미지 빌드 시작"
 docker build -t $IMAGE_NAME .
-docker run -d --name $CONTAINER_NAME ... $IMAGE_NAME
 
 echo "> 컨테이너 실행 시작"
 docker run -d \

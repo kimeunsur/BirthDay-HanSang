@@ -1,21 +1,24 @@
-# 베이스 이미지 설정
-FROM amazoncorretto:17 AS builder
+# Dockerfile.dev : CI 빌드용
 
-# Gradle 및 소스 코드 복사
+# 1단계: Gradle 빌드 단계
+FROM gradle:8.4.0-jdk17 AS builder
 WORKDIR /app
+
+# Gradle 캐시 최적화
+COPY build.gradle settings.gradle ./
+COPY gradle ./gradle
+RUN gradle build -x test || return 0
+
+# 전체 소스 복사 후 빌드
 COPY . .
+RUN gradle clean build -x test
 
-# Gradle 빌드 실행 (테스트 제외)
-RUN ./gradlew clean build -x test
-
-# 최종 이미지
+# 2단계: 실행용 이미지
 FROM amazoncorretto:17
-
-# 작업 디렉토리 설정
 WORKDIR /app
 
-# 빌드된 JAR 파일 복사
+# jar 복사
 COPY --from=builder /app/build/libs/*.jar app.jar
 
-# 컨테이너가 실행될 때 Java 애플리케이션 실행
+# EC2에서는 application.yml 따로 쓰므로 포함 X
 ENTRYPOINT ["java", "-jar", "app.jar"]
