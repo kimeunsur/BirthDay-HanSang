@@ -3,9 +3,11 @@ name: Deploy Spring Boot to EC2
 on:
   push:
     branches: [ "main" ]
+    types: [ closed ]
 
 jobs:
   deploy:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:
@@ -22,6 +24,7 @@ jobs:
         run: |
           mkdir -p ./src/main/resources
           echo "${{ secrets.APPLICATION_YML }}" | base64 --decode > ./src/main/resources/application.yml
+          cp ./src/main/resources/application.yml ./application.yml
 
       - name: Build with Gradle
         run: ./gradlew clean build -x test
@@ -53,5 +56,5 @@ jobs:
           key: ${{ secrets.EC2_KEY }}
           script: |
             cd ~/birthday-hansang
-            chmod +x deploy.sh
-            ./deploy.sh
+            chmod +x scripts/deploy.sh
+            ./scripts/deploy.sh
