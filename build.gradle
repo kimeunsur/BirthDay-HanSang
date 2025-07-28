@@ -9,11 +9,8 @@ version = '0.0.1-SNAPSHOT'
 
 java {
 	toolchain {
-<<<<<<< HEAD
 		languageVersion = JavaLanguageVersion.of(17)
-=======
 		languageVersion = JavaLanguageVersion.of(21)
->>>>>>> b4a9de7 (Initial commit: Spring Boot project)
 	}
 }
 
