@@ -45,7 +45,7 @@ jobs:
             build/libs/*.jar
             Dockerfile
             application.yml
-            deploy.sh
+            scripts/deploy.sh
           target: "~/birthday-hansang"
 
       - name: Run deploy script on EC2
