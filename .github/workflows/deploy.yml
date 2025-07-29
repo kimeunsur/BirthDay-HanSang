@@ -46,7 +46,15 @@ jobs:
           ls -al scripts/deploy.sh || echo "Missing scripts/deploy.sh"
 
       - name: Create deployment archive
-        run: tar --exclude='.git' --exclude='deploy.tar.gz' -czf deploy.tar.gz .
+        run: tar -czf deploy.tar.gz \
+          build/libs/*.jar \
+          Dockerfile \
+          application.yml \
+          scripts/deploy.sh \
+          build.gradle \
+          settings.gradle \
+          gradle
+
 
       - name: Copy archive to EC2
         uses: appleboy/scp-action@v0.1.7
