@@ -3,13 +3,11 @@ name: Deploy Spring Boot to EC2
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main"]
+
 jobs:
   deploy:
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
-
+    environment: production
     steps:
       - name: Checkout source code
         uses: actions/checkout@v3
