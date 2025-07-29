@@ -45,21 +45,19 @@ jobs:
           echo "Checking deploy.sh:"
           ls -al scripts/deploy.sh || echo "Missing scripts/deploy.sh"
 
-      - name: Copy files to EC2
+      - name: Create deployment archive
+        run: tar -czf deploy.tar.gz build/libs/*.jar Dockerfile application.yml scripts/deploy.sh
+
+      - name: Copy archive to EC2
         uses: appleboy/scp-action@v0.1.7
         with:
-          debug: true
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_KEY }}
-          source: |
-            build/libs/*.jar
-            Dockerfile
-            application.yml
-            scripts/deploy.sh
+          source: deploy.tar.gz
           target: "~/birthday-hansang"
 
-      - name: Run deploy script on EC2
+      - name: Extract archive & deploy
         uses: appleboy/ssh-action@v1.0.0
         with:
           host: ${{ secrets.EC2_HOST }}
@@ -67,5 +65,6 @@ jobs:
           key: ${{ secrets.EC2_KEY }}
           script: |
             cd ~/birthday-hansang
+            tar -xzf deploy.tar.gz
             chmod +x scripts/deploy.sh
             ./scripts/deploy.sh
