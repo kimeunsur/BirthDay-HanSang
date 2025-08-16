@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 public class Birthday extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "quiz_id")
+    @Column(name = "birthday_id")
     private Long id;
     @Column(nullable = false)
     private Integer year;
